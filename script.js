@@ -48,7 +48,7 @@ showTodo("all");
 function showMenu(selectedTask) {
   let menuDiv = selectedTask.parentElement.lastElementChild;
   menuDiv.classList.add("show");
-  document.addEventListener("click", e => {
+  document.addEventListener("click", (e) => {
     if (e.target.tagName != "I" || e.target != selectedTask) {
       menuDiv.classList.remove("show");
     }
@@ -89,7 +89,7 @@ clearAll.addEventListener("click", () => {
   showTodo();
 });
 
-taskInput.addEventListener("keyup", e => {
+taskInput.addEventListener("keyup", (e) => {
   let userTask = taskInput.value.trim();
   if (e.key == "Enter" && userTask) {
     if (!isEditTask) {
@@ -104,4 +104,4 @@ taskInput.addEventListener("keyup", e => {
     localStorage.setItem("todo-list", JSON.stringify(todos));
     showTodo(document.querySelector("span.active").id);
   }
-})
+});
