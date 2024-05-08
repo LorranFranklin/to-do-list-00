@@ -4,7 +4,7 @@ const clearAll = document.querySelector(".clear-btn");
 const taskBox = document.querySelector(".task-box");
 
 let editId,
-  editStatus = false,
+  isEditTask = false,
   todos = JSON.parse(localStorage.getItem("todo-list"));
 
 filters.forEach((btn) => {
