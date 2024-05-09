@@ -3,9 +3,9 @@ const filters = document.querySelectorAll(".filters span");
 const clearAll = document.querySelector(".clear-btn");
 const taskBox = document.querySelector(".task-box");
 
-let editId,
-  isEditTask = false,
-  todos = JSON.parse(localStorage.getItem("todo-list"));
+let editId;
+let isEditTask = false;
+let todos = JSON.parse(localStorage.getItem("todo-list"));
 
 filters.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -91,7 +91,7 @@ clearAll.addEventListener("click", () => {
 
 taskInput.addEventListener("keyup", (e) => {
   let userTask = taskInput.value.trim();
-  if (e.key == "enter" && userTask) {
+  if (e.key == "Enter" && userTask) {
     if (!isEditTask) {
       todos = !todos ? [] : todos;
       let taskInfo = { name: userTask, status: "pending" };
