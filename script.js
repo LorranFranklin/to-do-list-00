@@ -91,7 +91,7 @@ clearAll.addEventListener("click", () => {
 
 taskInput.addEventListener("keyup", (e) => {
   let userTask = taskInput.value.trim();
-  if (e.key == "Enter" && userTask) {
+  if (e.key == "enter" && userTask) {
     if (!isEditTask) {
       todos = !todos ? [] : todos;
       let taskInfo = { name: userTask, status: "pending" };
